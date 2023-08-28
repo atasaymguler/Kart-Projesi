@@ -1,0 +1,7 @@
+.card 
+{
+    width: 350px;
+    margin-right: 20px;
+}
+
+/* app.component.css'den alıp buraya yazarız card'ın csslerini niye çünkü orda ki css buraya etki etmez lokal olduğu için */

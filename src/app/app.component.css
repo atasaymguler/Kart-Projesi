@@ -1,15 +1,7 @@
-.card {
-    width: 350px;
-    margin-right: 20px;  /*  Bir sonraki kart ile arasında 20px bir boşluk bıraktım  */
-}
-
-.main {
+.main 
+{
     display: flex;
-    /* Bu kod sayesinde hepsi yan yana gelir */
     justify-content: center;
-    /* Bu kod sayesinde yatay olarak ortalarız, sola hizalamak isteseydim flex-start, sağa hizalamak isteseydim flex-end derim center yerine */
     min-height: 650px;
     align-items: center;
-    /* Dikey olarak ortalamak istiyorum bu yüzden bu kodu kullandık ama bu kodu kullanmamız yetmez çünkü min-height: ; vermemiz gerekiyor,vermezek bir şey değişmez*/
-   
 }
