@@ -1,23 +1,11 @@
-<div class="main"> 
-  <app-card 
-   [baslik]="posts[0].title"             
-  [resimYolu]="posts[0].imageUrl"       
-  [kullaniciAdi]="posts[0].username"
-  [yorum]="posts[0].content"
-  ></app-card> 
-  <!-- Componentler arasi veri nasil taşinir ; sonra veri alacak olan componentte @Input ile ayni değişkeni yazarız artık o veri componentin içine geldi  -->
-  <app-card
-  [baslik]="posts[1].title"
-  [resimYolu]="posts[1].imageUrl"
-  [kullaniciAdi]="posts[1].username"
-  [yorum]="posts[1].content"
-  ></app-card>
-  <app-card
-  [baslik]="posts[2].title"
-  [resimYolu]="posts[2].imageUrl"
-  [kullaniciAdi]="posts[2].username"
-  [yorum]="posts[2].content"
-  ></app-card> 
+<div class="main">
+  <app-card *ngFor="let post of posts"
+    [baslik]="post.title"
+    [resimYolu]="post.imageUrl"
+    [kullaniciAdi]="post.username"
+    [yorum]="post.content">
+  </app-card>
 </div>
 
- <!-- Kodlar ha card.componenet.html'den gelmiş selector ile div'in arasına yazmışız ya da buraya card'ı normal yazmışız farketmez aynı etki -->
+<!-- Bir kodu birden fazla kez yaziyorsak sikinti var o yüzden biz ngFor ile datayi döneriz ve döndüğümüz her bir datayi 
+değişkenlere atariz bu yöntem çok daha kolay tek tek yazmaktansa -->
